@@ -89,3 +89,25 @@ if __name__ == "__main__":
 # **Penjelasan Program**
  # 1. Kelas  **DaftarNilaiMahasiswa**:
  - `__init__` : Konstruktor untuk menginisialisasi atribut `data_mahasiswa` sebagai list kosong, yang digunakan untuk menyimpan data mahasiswa.
+ - `tambah` : Metode ini untuk menambahkan data mahasiswa baru ke dalam list `data_mahasiswa`. Data disimpan dalam bentuk dictionary dengan dua key: 'nama' dan 'nilai'.
+ - `tampilkan` : Metode ini digunakan untuk menampilkan semua data mahasiswa yang telah dimasukkan. Jika data mahasiswa kosong, program akan menampilkan pesan bahwa data belum ada.
+ - 'hapus` : Metode ini menghapus data mahasiswa berdasarkan nama. Nama yang dimasukkan akan dicocokkan dengan nama di dalam data mahasiswa (case-insensitive). Jika nama ditemukan, data akan dihapus.
+ - 'ubah' : Metode ini untuk mengubah nilai mahasiswa berdasarkan nama. Jika nama ditemukan, nilai mahasiswa tersebut akan diperbarui dengan nilai baru yang dimasukkan.
+ # 2. **Program Utama**
+- Menyediakan menu interaktif yang memungkinkan pengguna memilih salah satu dari lima pilihan:
+   - `Tambah Data (1)`: Memasukkan nama dan nilai mahasiswa baru.
+   - `Tampilkan Data (2)`: Menampilkan daftar seluruh mahasiswa yang sudah dimasukkan.
+   - `Hapus Data (3)`: Menghapus data mahasiswa berdasarkan nama.
+   - `Ubah Data (4)`: Mengubah nilai mahasiswa berdasarkan nama.
+   - `Keluar (5)`: Menghentikan program.
+   - Program terus berjalan hingga pengguna memilih untuk keluar (menu 5).
+ # **Alur Program**
+  1. Ketika dijalankan program menampilkan menu pilihan
+  2. Pengguna memilih salah satu opsi:
+     - `Tamabah Data` : Program meminta input nama dan nilai, kemudian menambahkannya ke dalam daftar.
+     - `Tampilkan Data` : Program menampilkan semua data mahasiswa yang ada.
+     - `Hapus Data` : Program meminta nama mahasiswa yang ingin dihapus, dan jika ditemukan data tersebut akan dihapus.
+     - `Ubah Data` : Program meminta nama mahasiswa dan nilai baru, kemudian memperbarui nilai mahasiswa jika nama ditemukan.
+   3. Program akan terus menampilkan menu hingga pengguna memilih **keluar**
+# **Output**
+
