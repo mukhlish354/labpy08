@@ -110,4 +110,96 @@ if __name__ == "__main__":
      - `Ubah Data` : Program meminta nama mahasiswa dan nilai baru, kemudian memperbarui nilai mahasiswa jika nama ditemukan.
    3. Program akan terus menampilkan menu hingga pengguna memilih **keluar**
 # **Output**
+```python
+
+=== Menu ===
+1. Tambah Data
+2. Tampilkan Data
+3. Hapus Data
+4. Ubah Data
+5. Keluar
+Pilih menu (1/2/3/4/5): 1
+Masukkan nama: aziz
+Masukkan nilai: 89
+Data aziz berhasil ditambahkan.
+
+=== Menu ===
+1. Tambah Data
+2. Tampilkan Data
+3. Hapus Data
+4. Ubah Data
+5. Keluar
+Pilih menu (1/2/3/4/5): 4
+Masukkan nama yang ingin diubah: aziz
+Masukkan nilai baru: 98
+Nilai aziz berhasil diubah menjadi 98.
+
+=== Menu ===
+1. Tambah Data
+2. Tampilkan Data
+3. Hapus Data
+4. Ubah Data
+5. Keluar
+Pilih menu (1/2/3/4/5): 2
+Daftar Nilai Mahasiswa:
+1. Nama: aziz, Nilai: 98
+
+=== Menu ===
+1. Tambah Data
+2. Tampilkan Data
+3. Hapus Data
+4. Ubah Data
+5. Keluar
+Pilih menu (1/2/3/4/5): 3
+Masukkan nama yang ingin dihapus: aziz
+Data aziz berhasil dihapus.
+
+=== Menu ===
+1. Tambah Data
+2. Tampilkan Data
+3. Hapus Data
+4. Ubah Data
+5. Keluar
+Pilih menu (1/2/3/4/5): 5
+Keluar dari program.
+```
+# flowchart
+
+```mermaid
+flowchart TD
+    A[Mulai] --> B{Pilih Menu}
+    B --> C[Tambah Data]
+    B --> D[Tampilkan Data]
+    B --> E[Hapus Data]
+    B --> F[Ubah Data]
+    B --> G[Keluar Program]
+
+    C --> C1[Masukkan Nama dan Nilai]
+    C1 --> C2[Tambahkan ke Daftar]
+    C2 --> H[Kembali ke Menu]
+
+    D --> D1{Apakah Data Kosong?}
+    D1 -->|Ya| D2[Tampilkan Pesan: Belum Ada Data]
+    D1 -->|Tidak| D3[Tampilkan Semua Data]
+    D2 --> H
+    D3 --> H
+
+    E --> E1[Masukkan Nama]
+    E1 --> E2{Nama Ditemukan?}
+    E2 -->|Ya| E3[Hapus Data dari Daftar]
+    E2 -->|Tidak| E4[Tampilkan Pesan: Nama Tidak Ditemukan]
+    E3 --> H
+    E4 --> H
+
+    F --> F1[Masukkan Nama]
+    F1 --> F2{Nama Ditemukan?}
+    F2 -->|Ya| F3[Masukkan Nilai Baru]
+    F3 --> F4[Perbarui Nilai di Daftar]
+    F2 -->|Tidak| F5[Tampilkan Pesan: Nama Tidak Ditemukan]
+    F4 --> H
+    F5 --> H
+
+    G --> I[Selesai]
+
+    H --> B
 
